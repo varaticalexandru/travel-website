@@ -8,6 +8,11 @@
     <title>Travago | Home page</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <link href="/fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="/fontawesome/css/brands.css" rel="stylesheet">
+    <link href="/fontawesome/css/solid.css" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -16,7 +21,8 @@
         <nav>
             <a href="index.html">
                 <img src="images/logo.png" alt="logo" class="logo">
-                <div class="nav-links">
+                <div class="nav-links" id="navLinks">
+                    <i class="fa-solid fa-times" id="close-btn" onclick="hideMenu()"></i>
                     <ul>
                         <li><a href="index.html">HOME</a></li>
                         <li><a href="index.html">ABOUT</a></li>
@@ -26,8 +32,39 @@
                     </ul>
                 </div>
             </a>
+            <i class="fa-solid fa-bars" id="open-btn" onclick="showMenu()"></i>
         </nav>
+
+
+        <div class="text-box">
+            <h1>Travago : World's Best Travel Site</h1>
+            <p>
+                Traveling can be an incredibly enriching and enjoyable experience, offering the opportunity to explore new cultures,
+                <br>
+                taste exotic cuisines, meet interesting people, and create unforgettable memories that last a lifetime.
+            </p>
+            <a href="index.html" class="hero-btn">Visit Us To Know More</a>
+        </div>
+
+
     </section>
+
+
+
+
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
 
 </body> 
 

@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Product Sans';
+    src: url('fonts/ProductSans-Black.ttf') format('black'),
+        url('fonts/ProductSans-Bold.ttf') format('bold'),
+        url('fonts/ProductSans-Regular.ttf') format('regular'),
+        url('fonts/ProductSans-Light.ttf') format('light'),
+        url('fonts/ProductSans-Thin.ttf') format('thin'),
+        url('fonts/ProductSans-Italic.ttf') format('italic'),
+        url('fonts/ProductSans-BoldItalic.ttf') format('bolditalic'),
+        url('fonts/ProductSans-LightItalic.ttf') format('lightitalic'),
+        url('fonts/ProductSans-ThinItalic.ttf') format('thinitalic'), 
+        url('fonts/ProductSans-BlackItalic.ttf') format('blackitalic'),
+        url('fonts/ProductSans-Medium.ttf') format('medium'),
+        url('fonts/ProductSans-MediumItalic.ttf') format('mediumitalic');
+    }
