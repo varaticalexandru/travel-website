@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <title>Travago | About</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
 
     <link href="/fontawesome/css/fontawesome.css" rel="stylesheet">
     <link href="/fontawesome/css/brands.css" rel="stylesheet">
@@ -19,9 +19,9 @@
 
 <body>
 
-    <!------ Header ------->
+    <!------ Sub-Header ------->
 
-    <section class="header">
+    <section class="sub-header">
         <nav>
             <a href="index.html">
                 <img src="images/logo.png" alt="logo" class="logo">
@@ -41,18 +41,33 @@
             <i class="fa-solid fa-bars" id="open-btn" onclick="showMenu()"></i>
         </nav>
 
+       <h1>About Us</h1>
+    </section>
 
-        <div class="text-box">
-            <h1>Travago : World's Best Travel Site</h1>
-            <p>
-                Traveling can be an incredibly enriching and enjoyable experience, offering the opportunity to explore new cultures,
-                <br>
-                taste exotic cuisines, meet interesting people, and create unforgettable memories that last a lifetime.
-            </p>
-            <a href="index.html" class="hero-btn">Visit Us To Know More</a>
+
+
+    <!------ About Us Content ------->
+
+    <section class="about-us">
+        <div class="row">
+            <div class="about-col">
+                <h1>We are the highest ranked travel support website in the world</h1>
+                <p>
+                    At our travel company, we are a team of passionate individuals who love to explore the world and help others do the same.
+                    Our mission is to provide exceptional travel experiences that create lasting memories.
+                    We strive to go above and beyond for our clients, offering personalized service and attention to detail in everything we do.
+                    With years of experience in the travel industry, we have developed strong relationships with airlines, hotels, and other travel partners, allowing us to offer exclusive deals and access to some of the world's most incredible destinations.
+                    We understand that every traveler is unique, and we work closely with each of our clients to design custom travel itineraries that perfectly match their interests and preferences.
+                    Whether you're planning a romantic getaway, a family vacation, or a solo adventure, we are here to help you every step of the way.
+                    From booking flights and accommodations to arranging activities and excursions, we take care of all the details so you can focus on making memories that will last a lifetime.
+                </p>
+                <a href="" class="hero-btn red-btn">EXPLORE NOW</a>
+            </div>
+
+            <div class="about-col">
+                <img src="/images/img_24.jpg" alt="About Us">
+            </div>
         </div>
-
-
     </section>
 
 
@@ -60,6 +75,7 @@
 
 
     <!------ Footer ------->
+
     <section class="footer">
         <h4>About Us</h4>
         <p>
@@ -85,6 +101,7 @@
 
 
     <!----------------------- JavaScript for Toggle Menu ------------------------>
+
     <script>
 
         var navLinks = document.getElementById("navLinks");
