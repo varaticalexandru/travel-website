@@ -131,7 +131,6 @@ nav .fa-solid {
     .text-box h1 {
         font-size: 32px; /* */
         font-weight: bold;
-        
     }
 
     .text-box p {
@@ -229,6 +228,8 @@ h3 {
         flex-direction: column;
     }
 }
+
+
 
 /* -------- destinations -------- */
 .destinations {

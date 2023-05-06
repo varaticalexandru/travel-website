@@ -4,13 +4,20 @@
     font-family: 'Product Sans', sans-serif;
 }
 
-.header {
-    min-height: 100vh;
+
+/* -------- sub-header -------- */
+.sub-header {
+    height: 50vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("images/img_21_10px.jpg");
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/img_11.jpg);
     background-position: center;
     background-size: cover;
-    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.sub-header h1 {
+    margin-top: 50px; /* 100px */
 }
 
 
@@ -66,35 +73,6 @@ nav {
     width: 100%;
 }
 
-
-/* .text-box */ .hero-btn { 
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    text-decoration: none;
-    border: 1px solid #fff;
-    padding: 12px 34px;
-    font-size: 18px;
-    /* font-size: 1.1rem;  */
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    /* */
-
-}
-
-.hero-btn:hover {
-    border: 1px solid #f44336; /* #802621 */
-    background: #f44336;    /* #802621 */
-    /* */
-    transition: 0.5s;
-    /* */
-    border-radius: 1.25em;
-    /* */
-    border: 1px solid #fff;
-    /* */
-}
 
 nav .fa-solid {
     display: none;
@@ -169,11 +147,79 @@ h3 {
 
 
 
+
+/* -------- service -------- */
+.service {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+
+.service-col {
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 1.25em;  /* 10px */
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    cursor: pointer; /* */
+    
+}
+
+
+.service-col:hover {
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+
 /* media query */
 @media(max-width: 700px) {
     .row {
         flex-direction: column;
     }
+}
+
+
+
+/* -------- packages -------- */
+.packages {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.packages-col {
+    flex-basis: 31%;
+    border-radius: 1.25em; /* 10px */
+    margin-bottom: 5%;
+    text-align: left;
+    box-sizing: border-box; /* */
+}
+
+.packages-col img {
+    width: 100%;
+    border-radius: 1.25em; /* 10px */
+    cursor: pointer; /* */
+    transition: 0.5s; /* */
+}
+
+/* */
+.packages-col img:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.514);
+}
+
+.packages-col p {
+    padding: 0;
+}
+
+.packages-col h3 {
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
 }
 
 
@@ -206,54 +252,4 @@ h3 {
 
 
 
-/* -------- about us page -------- */
-.sub-header {
-    height: 50vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/img_11.jpg);
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    color: white;
-}
 
-.sub-header h1 {
-    margin-top: 50px; /* 100px */
-}
-
-
-.about-us {
-    width: 80%;
-    margin: auto;
-    padding-top: 80px;
-    padding-bottom: 50px;
-}
-
-.about-col {
-    flex-basis: 48%;
-    padding: 30px 2px;
-}
-
-.about-col img {
-    width: 100%;
-    border-radius: 1.25em; /* */
-}
-
-.about-col h1 {
-    padding-top: 0;
-}
-
-.about-col p {
-    padding: 15px 0 25px;
-}
-
-.red-btn {
-    border: 1px solid #802621;
-    background: transparent;
-    color: #802621;
-}
-
-.red-btn:hover {
-    color: white;
-    background-color: #802621;
-}
