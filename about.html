@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Travago | About</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="/fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="/fontawesome/css/brands.css" rel="stylesheet">
+    <link href="/fontawesome/css/solid.css" rel="stylesheet">
+    <link href="/fontawesome/css/regular.css" rel="stylesheet">
+    <link href="/fontawesome/css/brands.css" rel="stylesheet">
+    
+</head>
+
+<body>
+
+    <!------ Header ------->
+
+    <section class="header">
+        <nav>
+            <a href="index.html">
+                <img src="images/logo.png" alt="logo" class="logo">
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-times" id="close-btn" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.html">ABOUT</a></li>
+                    <li><a href="index.html">SERVICE</a></li>
+                    <li><a href="index.html">BLOG</a></li>
+                    <li><a href="index.html">CONTACT</a></li>
+                </ul>
+            </div>
+            
+            <i class="fa-solid fa-bars" id="open-btn" onclick="showMenu()"></i>
+        </nav>
+
+
+        <div class="text-box">
+            <h1>Travago : World's Best Travel Site</h1>
+            <p>
+                Traveling can be an incredibly enriching and enjoyable experience, offering the opportunity to explore new cultures,
+                <br>
+                taste exotic cuisines, meet interesting people, and create unforgettable memories that last a lifetime.
+            </p>
+            <a href="index.html" class="hero-btn">Visit Us To Know More</a>
+        </div>
+
+
+    </section>
+
+
+
+
+
+    <!------ Footer ------->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>
+            At our travel company, we are passionate about creating unforgettable experiences for our clients.
+            <br>
+            With years of experience and a commitment to exceptional service, we are dedicated to making your dream vacation a reality.
+        </p>
+
+        <div class="icons">
+            <i class="fa-brands fa-telegram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <p>Made with <i class="fa-regular fa-heart"></i> by Alexandru Varatic</p>
+    </section>
+
+
+
+
+
+
+
+
+    <!----------------------- JavaScript for Toggle Menu ------------------------>
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
+
+</body> 
+
+
+</html>
