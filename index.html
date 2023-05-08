@@ -30,11 +30,11 @@
             <div class="nav-links" id="navLinks">
                 <i class="fa-solid fa-times" id="close-btn" onclick="hideMenu()"></i>
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="services.html">SERVICES</a></li>
-                    <li><a href="blog.html">BLOG</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="index.html" id="homeLink" target="_blank">HOME</a></li>
+                    <li><a href="about.html" id="aboutLink" target="_blank">ABOUT</a></li>
+                    <li><a href="services.html" id="servicesLink" target="_blank">SERVICES</a></li>
+                    <li><a href="blog.html" id="blogLink" target="_blank">BLOG</a></li>
+                    <li><a href="contact.html" id="contactLink" target="_blank">CONTACT</a></li>
                 </ul>
             </div>
 
@@ -268,7 +268,6 @@
 
 
 
-
     <!----------------------- JavaScript ------------------------>
     <script>
 
@@ -289,6 +288,77 @@
         window.addEventListener('beforeunload', function () {
             document.body.classList.add('page-transition-out');
         });
+
+
+       
+        
+
+        // init counters
+        var homeLinkCount = 0;
+        var aboutLinkCount = 0;
+        var servicesLinkCount = 0;
+        var blogLinkCount = 0;
+        var contactLinkCount = 0;
+
+        // get the nav links
+        var homeLink = document.querySelector('a[id="homeLink"]');
+        var aboutLink = document.querySelector('a[id="aboutLink"]');
+        var servicesLink = document.querySelector('a[id="servicesLink"]');
+        var blogLink = document.querySelector('a[id="blogLink"]');
+        var contactLink = document.querySelector('a[id="contactLink"]');
+
+
+        // Add event listeners to each nav link
+        homeLink.addEventListener('click', function() {
+            homeLinkCount++;
+            rearrange();
+        });
+
+        aboutLink.addEventListener('click', function() {
+            aboutLinkCount++;
+            rearrange();
+        });
+
+        servicesLink.addEventListener('click', function() {
+            servicesLinkCount++;
+            rearrange();
+        });
+
+        blogLink.addEventListener('click', function() {
+            blogLinkCount++;
+            rearrange();
+        });
+
+        contactLink.addEventListener('click', function() {
+            contactLinkCount++;
+            rearrange();
+        });
+
+        
+
+        // Rearrange the nav links on the page based on the sorted array
+        function rearrange() {
+
+            // Create an array of objects containing the link and its click count
+            var linkCounts = [
+                { link: homeLink, count: homeLinkCount },
+                { link: aboutLink, count: aboutLinkCount },
+                { link: servicesLink, count: servicesLinkCount },
+                { link: blogLink, count: blogLinkCount },
+                { link: contactLink, count: contactLinkCount }
+            ];
+
+            // Sort the array in descending order based on click count
+            linkCounts.sort(function(a, b) {
+                return b.count - a.count;
+            });
+
+            var navLinks = document.querySelector('#navLinks ul');
+
+            for (var i = 0; i < linkCounts.length; i++) {
+                navLinks.appendChild(linkCounts[i].link.parentNode);
+            }
+        }
 
     </script>
 
