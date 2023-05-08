@@ -14,10 +14,10 @@
     <link href="/fontawesome/css/solid.css" rel="stylesheet">
     <link href="/fontawesome/css/regular.css" rel="stylesheet">
     <link href="/fontawesome/css/brands.css" rel="stylesheet">
-    
+
 </head>
 
-<body>
+<body class="page-transition-in">
 
     <!------ Sub-Header ------->
 
@@ -37,11 +37,11 @@
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
             </div>
-            
+
             <i class="fa-solid fa-bars" id="open-btn" onclick="showMenu()"></i>
         </nav>
 
-       <h1>About Us</h1>
+        <h1>About Us</h1>
     </section>
 
 
@@ -53,15 +53,22 @@
             <div class="about-col">
                 <h1>We are the highest ranked travel support website in the world</h1>
                 <p>
-                    At our travel company, we are a team of passionate individuals who love to explore the world and help others do the same.
+                    At our travel company, we are a team of passionate individuals who love to explore the world and
+                    help others do the same.
                     Our mission is to provide exceptional travel experiences that create lasting memories.
-                    We strive to go above and beyond for our clients, offering personalized service and attention to detail in everything we do.
-                    With years of experience in the travel industry, we have developed strong relationships with airlines, hotels, and other travel partners, allowing us to offer exclusive deals and access to some of the world's most incredible destinations.
-                    We understand that every traveler is unique, and we work closely with each of our clients to design custom travel itineraries that perfectly match their interests and preferences.
-                    Whether you're planning a romantic getaway, a family vacation, or a solo adventure, we are here to help you every step of the way.
-                    From booking flights and accommodations to arranging activities and excursions, we take care of all the details so you can focus on making memories that will last a lifetime.
+                    We strive to go above and beyond for our clients, offering personalized service and attention to
+                    detail in everything we do.
+                    With years of experience in the travel industry, we have developed strong relationships with
+                    airlines, hotels, and other travel partners, allowing us to offer exclusive deals and access to some
+                    of the world's most incredible destinations.
+                    We understand that every traveler is unique, and we work closely with each of our clients to design
+                    custom travel itineraries that perfectly match their interests and preferences.
+                    Whether you're planning a romantic getaway, a family vacation, or a solo adventure, we are here to
+                    help you every step of the way.
+                    From booking flights and accommodations to arranging activities and excursions, we take care of all
+                    the details so you can focus on making memories that will last a lifetime.
                 </p>
-                <a href="" class="hero-btn red-btn">EXPLORE NOW</a>
+                <a href="/index.html" class="hero-btn red-btn">EXPLORE NOW</a>
             </div>
 
             <div class="about-col">
@@ -81,14 +88,16 @@
         <p>
             At our travel company, we are passionate about creating unforgettable experiences for our clients.
             <br>
-            With years of experience and a commitment to exceptional service, we are dedicated to making your dream vacation a reality.
+            With years of experience and a commitment to exceptional service, we are dedicated to making your dream
+            vacation a reality.
         </p>
 
         <div class="icons">
-            <i class="fa-brands fa-telegram"></i>
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-telegram" onclick="redirectTo('https://t.me/varaticalexandru')"></i>
+            <i class="fa-brands fa-facebook" onclick="redirectTo('https://www.facebook.com/varaticalexandru1/')"></i>
+            <i class="fa-brands fa-instagram" onclick="redirectTo('https://www.instagram.com/alx_vrt/')"></i>
+            <i class="fa-brands fa-linkedin" onclick="redirectTo('https://www.linkedin.com/in/alexandru-varatic-653313217/')"></i>
+            <i class="fa-brands fa-github" onclick="redirectTo('https://github.com/varaticalexandru')"></i>
         </div>
         <p>Made with <i class="fa-regular fa-heart"></i> by Alexandru Varatic</p>
     </section>
@@ -100,7 +109,7 @@
 
 
 
-    <!----------------------- JavaScript for Toggle Menu ------------------------>
+    <!----------------------- JavaScript ------------------------>
 
     <script>
 
@@ -114,9 +123,17 @@
             navLinks.style.right = "-200px";
         }
 
+        function redirectTo(url) {
+            window.location.href = url;
+        }
+
+        window.addEventListener('beforeunload', function () {
+            document.body.classList.add('page-transition-out');
+        });
+
     </script>
 
-</body> 
+</body>
 
 
 </html>

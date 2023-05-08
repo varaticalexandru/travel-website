@@ -8,6 +8,40 @@ html {
     scroll-behavior: smooth;
 }
 
+/* fade-out class */
+.page-transition-out {
+    animation-name: fadeOut;
+    animation-duration: 1.5s;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/* fade-in class */
+.page-transition-in {
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
 .header {
     min-height: 100vh;
     width: 100%;
@@ -95,7 +129,8 @@ nav {
     /* color: #fff; */
 }
 
-/* .text-box */ .hero-btn { 
+/* .text-box */
+.hero-btn {
     display: inline-block;
     text-decoration: none;
     color: #fff;
@@ -133,7 +168,8 @@ nav .fa-solid {
 /* media query */
 @media (max-width: 700px) {
     .text-box h1 {
-        font-size: 32px; /* */
+        font-size: 32px;
+        /* */
         font-weight: bold;
     }
 
@@ -191,7 +227,8 @@ h1 {
 
 p {
     color: #777;
-    font-size: 16px; /* 18 */
+    font-size: 16px;
+    /* 18 */
     font-weight: 300;
     line-height: 22px;
     padding: 10px;
@@ -206,13 +243,15 @@ p {
 .service-col {
     flex-basis: 31%;
     background: #fff3f3;
-    border-radius: 1.25em;  /* 10px */
+    border-radius: 1.25em;
+    /* 10px */
     margin-bottom: 5%;
     padding: 20px 12px;
     box-sizing: border-box;
     transition: 0.5s;
-    cursor: pointer; /* */
-    
+    cursor: pointer;
+    /* */
+
 }
 
 h3 {
@@ -222,7 +261,7 @@ h3 {
 }
 
 .service-col:hover {
-    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -245,7 +284,8 @@ h3 {
 
 .destinations-col {
     flex-basis: 32%;
-    border-radius: 1.25em; /*10px*/
+    border-radius: 1.25em;
+    /*10px*/
     margin-bottom: 30px;
     position: relative;
     overflow: hidden;
@@ -300,17 +340,22 @@ h3 {
 
 .packages-col {
     flex-basis: 31%;
-    border-radius: 1.25em; /* 10px */
+    border-radius: 1.25em;
+    /* 10px */
     margin-bottom: 5%;
     text-align: left;
-    box-sizing: border-box; /* */
+    box-sizing: border-box;
+    /* */
 }
 
 .packages-col img {
     width: 100%;
-    border-radius: 1.25em; /* 10px */
-    cursor: pointer; /* */
-    transition: 0.5s; /* */
+    border-radius: 1.25em;
+    /* 10px */
+    cursor: pointer;
+    /* */
+    transition: 0.5s;
+    /* */
 }
 
 /* */
@@ -340,7 +385,8 @@ h3 {
 
 .testimonial-col {
     flex-basis: 44%;
-    border-radius: 1.25em; /* 10px */
+    border-radius: 1.25em;
+    /* 10px */
     margin-bottom: 5%;
     text-align: left;
     background: #fff3f3;
@@ -365,7 +411,8 @@ h3 {
     text-align: left;
 }
 
-.testimonial-col .fa-solid, .testimonial-col .fa-regular {
+.testimonial-col .fa-solid,
+.testimonial-col .fa-regular {
     color: #f44336;
 }
 
@@ -383,10 +430,11 @@ h3 {
 .cta {
     margin: 100px auto;
     width: 80%;
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/img_6.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/img_6.jpg);
     background-position: center;
     background-size: cover;
-    border-radius: 1.25em; /* 10px */
+    border-radius: 1.25em;
+    /* 10px */
     text-align: center;
     padding: 100px 0;
 }
@@ -421,12 +469,13 @@ h3 {
     font-weight: 600;
 }
 
-.icons .fa-brands{
+.icons .fa-brands {
     color: #f44336;
     margin: 0 13px;
     cursor: pointer;
     padding: 18px 0;
-    font-size: 28px; /* */
+    font-size: 28px;
+    /* */
 }
 
 .fa-heart {

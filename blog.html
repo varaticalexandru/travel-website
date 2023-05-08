@@ -17,7 +17,7 @@
 
 </head>
 
-<body>
+<body class="page-transition-in">
 
   <!------ Sub-Header ------->
 
@@ -75,17 +75,18 @@
         <br>
         <p>
           Don't forget to take advantage of our special vouchers, which offer even more savings on your next adventure.
-          Whether you're traveling with friends, family, or solo, we have a travel package that is tailored to your needs.
+          Whether you're traveling with friends, family, or solo, we have a travel package that is tailored to your
+          needs.
           Book now and let us help you plan the trip of a lifetime!
         </p>
 
         <div class="comment-box">
           <h3>Leave a comment</h3>
 
-          <form class="comment-form">
-            <input type="text" placeholder="Enter Name">
-            <input type="text" placeholder="Enter Email">
-            <textarea name="" id="" rows="5" placeholder="Your Comment"></textarea>
+          <form class="comment-form" name="comment-form" onsubmit="return validateForm()">
+            <input type="text" placeholder="Enter Name" name="name" required>
+            <input type="text" placeholder="Enter Email" name="email" required>
+            <textarea name="comment" id="" rows="5" placeholder="Your Comment" required></textarea>
             <button type="submit" class="hero-btn red-btn">Post Comment</button>
           </form>
         </div>
@@ -171,10 +172,11 @@
     </p>
 
     <div class="icons">
-      <i class="fa-brands fa-telegram"></i>
-      <i class="fa-brands fa-facebook"></i>
-      <i class="fa-brands fa-instagram"></i>
-      <i class="fa-brands fa-linkedin"></i>
+      <i class="fa-brands fa-telegram" onclick="redirectTo('https://t.me/varaticalexandru')"></i>
+      <i class="fa-brands fa-facebook" onclick="redirectTo('https://www.facebook.com/varaticalexandru1/')"></i>
+      <i class="fa-brands fa-instagram" onclick="redirectTo('https://www.instagram.com/alx_vrt/')"></i>
+      <i class="fa-brands fa-linkedin" onclick="redirectTo('https://www.linkedin.com/in/alexandru-varatic-653313217/')"></i>
+      <i class="fa-brands fa-github" onclick="redirectTo('https://github.com/varaticalexandru')"></i>
     </div>
     <p>Made with <i class="fa-regular fa-heart"></i> by Alexandru Varatic</p>
   </section>
@@ -186,7 +188,7 @@
 
 
 
-  <!----------------------- JavaScript for Toggle Menu ------------------------>
+  <!----------------------- JavaScript ------------------------>
 
   <script>
 
@@ -198,6 +200,46 @@
 
     function hideMenu() {
       navLinks.style.right = "-200px";
+    }
+
+    window.addEventListener('beforeunload', function () {
+      document.body.classList.add('page-transition-out');
+    });
+
+    function redirectTo(url) {
+      window.location.href = url;
+    }
+
+    function validateForm() {
+
+      // get data from comment-form
+      const name = document.forms["comment-form"]["name"].value;
+      const email = document.forms["comment-form"]["email"].value;
+      const comment = document.forms["comment-form"]["comment"].value;
+
+      // validate name
+      if (name == "") {
+        alert("Name must be filled out");
+        return false;
+      }
+
+      // validate email
+      // RegEx pattern for email addresses
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email) || email == "") {
+        alert("Invalid email address");
+        return false;
+      }
+
+      // validate comment
+      if (comment == "") {
+        alert("Comment must be filled out");
+        return false;
+      }
+
+
+      // form validation succeeded
+      return true;
     }
 
   </script>
