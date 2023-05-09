@@ -204,6 +204,10 @@ nav .fa-solid {
         padding: 30px;
     }
 
+    body {
+        overflow-x: hidden;
+    }
+
 }
 
 
