@@ -35,6 +35,7 @@
                     <li><a href="services.html">SERVICES</a></li>
                     <li><a href="blog.html">BLOG</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
+                    <li><i class="fa-regular fa-moon" id="dark-btn" onclick="toggleDarkMode()"></i></li>
                 </ul>
             </div>
 
@@ -130,6 +131,35 @@
         window.addEventListener('beforeunload', function () {
             document.body.classList.add('page-transition-out');
         });
+
+
+
+        function toggleDarkMode() {
+            const body = document.body;
+            const navLinks = document.querySelectorAll(".nav-links li a");
+            const darkBtn = document.getElementById("dark-btn");
+
+            body.classList.toggle("dark-theme");
+
+            if (body.classList.contains("dark-theme")) {
+                darkBtn.classList.add("fa-sun");
+            } else {
+                darkBtn.classList.remove("fa-sun");
+            }
+
+            // Save the user's preference to local storage
+            if (body.classList.contains("dark-theme")) {
+                localStorage.setItem("darkMode", "enabled");
+            } else {
+                localStorage.setItem("darkMode", "disabled");
+            }
+        }
+
+        // Check if the user has a preference for dark mode
+        const currentMode = localStorage.getItem("darkMode");
+        if (currentMode === "enabled") {
+            toggleDarkMode();
+        }
 
     </script>
 

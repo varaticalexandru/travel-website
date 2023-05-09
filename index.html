@@ -35,6 +35,7 @@
                     <li><a href="services.html" id="servicesLink" target="_blank">SERVICES</a></li>
                     <li><a href="blog.html" id="blogLink" target="_blank">BLOG</a></li>
                     <li><a href="contact.html" id="contactLink" target="_blank">CONTACT</a></li>
+                    <li><i class="fa-regular fa-moon" id="dark-btn" onclick="toggleDarkMode()"></i></li>
                 </ul>
             </div>
 
@@ -258,7 +259,8 @@
             <i class="fa-brands fa-telegram" onclick="redirectTo('https://t.me/varaticalexandru')"></i>
             <i class="fa-brands fa-facebook" onclick="redirectTo('https://www.facebook.com/varaticalexandru1/')"></i>
             <i class="fa-brands fa-instagram" onclick="redirectTo('https://www.instagram.com/alx_vrt/')"></i>
-            <i class="fa-brands fa-linkedin" onclick="redirectTo('https://www.linkedin.com/in/alexandru-varatic-653313217/')"></i>
+            <i class="fa-brands fa-linkedin"
+                onclick="redirectTo('https://www.linkedin.com/in/alexandru-varatic-653313217/')"></i>
             <i class="fa-brands fa-github" onclick="redirectTo('https://github.com/varaticalexandru')"></i>
         </div>
         <p>Made with <i class="fa-regular fa-heart"></i> by Alexandru Varatic</p>
@@ -290,8 +292,8 @@
         });
 
 
-       
-        
+
+
 
         // init counters
         var homeLinkCount = 0;
@@ -309,32 +311,37 @@
 
 
         // Add event listeners to each nav link
-        homeLink.addEventListener('click', function() {
+        homeLink.addEventListener('click', function () {
             homeLinkCount++;
             rearrange();
         });
 
-        aboutLink.addEventListener('click', function() {
+        aboutLink.addEventListener('click', function () {
             aboutLinkCount++;
             rearrange();
         });
 
-        servicesLink.addEventListener('click', function() {
+        servicesLink.addEventListener('click', function () {
             servicesLinkCount++;
             rearrange();
         });
 
-        blogLink.addEventListener('click', function() {
+        blogLink.addEventListener('click', function () {
             blogLinkCount++;
             rearrange();
         });
 
-        contactLink.addEventListener('click', function() {
+        contactLink.addEventListener('click', function () {
             contactLinkCount++;
             rearrange();
         });
 
-        
+        contactLink.addEventListener('click', function () {
+            contactLinkCount++;
+            rearrange();
+        });
+
+
 
         // Rearrange the nav links on the page based on the sorted array
         function rearrange() {
@@ -349,7 +356,7 @@
             ];
 
             // Sort the array in descending order based on click count
-            linkCounts.sort(function(a, b) {
+            linkCounts.sort(function (a, b) {
                 return b.count - a.count;
             });
 
@@ -358,6 +365,38 @@
             for (var i = 0; i < linkCounts.length; i++) {
                 navLinks.appendChild(linkCounts[i].link.parentNode);
             }
+        }
+
+
+
+
+
+
+        function toggleDarkMode() {
+            const body = document.body;
+            const navLinks = document.querySelectorAll(".nav-links li a");
+            const darkBtn = document.getElementById("dark-btn");
+
+            body.classList.toggle("dark-theme");
+
+            if (body.classList.contains("dark-theme")) {
+                darkBtn.classList.add("fa-sun");
+            } else {
+                darkBtn.classList.remove("fa-sun");
+            }
+
+            // Save the user's preference to local storage
+            if (body.classList.contains("dark-theme")) {
+                localStorage.setItem("darkMode", "enabled");
+            } else {
+                localStorage.setItem("darkMode", "disabled");
+            }
+        }
+
+        // Check if the user has a preference for dark mode
+        const currentMode = localStorage.getItem("darkMode");
+        if (currentMode === "enabled") {
+            toggleDarkMode();
         }
 
     </script>
